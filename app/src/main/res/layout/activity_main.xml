@@ -5,8 +5,13 @@
     android:layout_height="match_parent"
     tools:context="com.example.guisfits.simplesjustica.MainActivity">
 
-    <ListView android:id="@+id/list"
+
+    <ListView
+        android:id="@+id/list"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
 
 </RelativeLayout>
