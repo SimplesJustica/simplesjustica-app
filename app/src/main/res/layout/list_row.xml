@@ -7,32 +7,22 @@
         android:id="@+id/nome"
         android:layout_width="match_parent"
         android:layout_height="33dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:text="TextView" />
+        android:layout_alignParentTop="true" />
 
     <TextView
         android:id="@+id/descricao"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
-        android:text="TextView" />
+        android:layout_height="65dp" />
 
     <TextView
         android:id="@+id/demandas"
         android:layout_width="134dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView"
-        android:text="TextView" />
+        android:layout_height="35dp" />
 
     <Button
         android:id="@+id/btnJuntese"
         android:layout_width="99dp"
         android:layout_height="36dp"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/textView"
-        android:text="Button" />
+        android:text="Junte-se" />
 
 </RelativeLayout>
