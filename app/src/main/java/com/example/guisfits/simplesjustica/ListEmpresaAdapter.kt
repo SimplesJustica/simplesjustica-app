@@ -8,8 +8,8 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 
 class ListExampleAdapter(context: Context, list: ArrayList<EmpresaModel>) : BaseAdapter() {
-    var mInflator: LayoutInflater
-    var empresaList: ArrayList<EmpresaModel>
+    var mInflator: LayoutInflater?=null
+    var empresaList: ArrayList<EmpresaModel>?=null
 
     init {
         this.empresaList = list
@@ -20,7 +20,7 @@ class ListExampleAdapter(context: Context, list: ArrayList<EmpresaModel>) : Base
         var view: View?
 
         if(convertView == null){
-            view = this.mInflator.inflate(R.layout.list_row, parent, false)
+            view = this.mInflator?.inflate(R.layout.list_row, parent, false)
         }
         else {
             view = convertView
@@ -35,21 +35,21 @@ class ListExampleAdapter(context: Context, list: ArrayList<EmpresaModel>) : Base
         txtDemandas = view?.findViewById(R.id.demandas) as TextView
 
         var model: EmpresaModel
-        model = getItem(position) as EmpresaModel
+        model = getItem(position)!!
 
         txtNome.setText(model.nome)
         txtDescricao.setText(model.descricao)
-        txtDemandas.setText(model.demandas)
+        txtDemandas.setText("Demandas: " + model.demandas.toString())
 
-        return view
+        return view!!
     }
 
     override fun getCount(): Int {
-        return empresaList.size
+        return empresaList!!.size
     }
 
-    override fun getItem(position: Int): Any {
-        return empresaList.get(position)
+    override fun getItem(position: Int): EmpresaModel? {
+        return empresaList?.get(position)
     }
 
     override fun getItemId(position: Int): Long {
